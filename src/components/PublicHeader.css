@@ -189,3 +189,50 @@
     white-space: nowrap;
   }
 }
+
+.public-login-btn {
+  padding: 8px 22px;
+  border-radius: 20px;
+  border: 1.5px solid #5EAA7B;
+  background: #fff;
+  color: #5EAA7B;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.public-login-btn:hover {
+  background: #e8f5e9;
+}
+
+.public-register-btn {
+  padding: 8px 22px;
+  border-radius: 20px;
+  border: none;
+  background: #5EAA7B;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.public-register-btn:hover {
+  background: #4b8f65;
+}
+
+/* Mobilde butonların yan yana düzgün kalması için */
+@media (max-width: 768px) {
+  .public-header-right {
+    gap: 8px;
+  }
+
+  .public-login-btn,
+  .public-register-btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+}

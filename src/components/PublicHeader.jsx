@@ -16,13 +16,16 @@ const PublicHeader = () => {
 
   return (
     <header className="public-header">
+      {/* Sol - Logo */}
       <div className="public-header-left">
         <div className="public-logo-icon">
-            <img src="src//assets//logo.svg" alt="E-Pharmacy Logo" />
+          <span className="public-cross" />
+          <span className="public-leaf" />
         </div>
         <span className="public-brand-text">E-Pharmacy</span>
       </div>
 
+      {/* Orta - Navigasyon */}
       <nav className="public-nav">
         <NavLink to="/home" className={({ isActive }) => `public-nav-item ${isActive ? 'active' : ''}`}>
           Home
@@ -35,7 +38,9 @@ const PublicHeader = () => {
         </NavLink>
       </nav>
 
+      {/* Sağ - Kullanıcı / Auth Durumu */}
       <div className="public-header-right">
+        {/* Sepet Butonu (her zaman) */}
         <button className="public-cart-btn" onClick={() => navigate('/cart')}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EAA7B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="9" cy="21" r="1" />
@@ -45,14 +50,28 @@ const PublicHeader = () => {
           {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
         </button>
 
-        <div className="public-profile-icon">
-          {user ? user.name?.charAt(0).toUpperCase() : '|'}
-        </div>
-
-        {user && (
-          <button className="public-logout-btn" onClick={handleLogout}>
-            Log out
-          </button>
+        {user ? (
+          <>
+            {/* Profil İkonu */}
+            <div className="public-profile-icon">
+              {user.name?.charAt(0).toUpperCase()}
+            </div>
+            {/* Logout */}
+            <button className="public-logout-btn" onClick={handleLogout}>
+              Log out
+            </button>
+          </>
+        ) : (
+          <>
+            {/* Login Butonu */}
+            <button className="public-login-btn" onClick={() => navigate('/login')}>
+              Log in
+            </button>
+            {/* Register Butonu */}
+            <button className="public-register-btn" onClick={() => navigate('/register')}>
+              Register
+            </button>
+          </>
         )}
       </div>
     </header>

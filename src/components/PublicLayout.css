@@ -1,0 +1,16 @@
+.public-layout {
+  min-height: 100vh;
+  background: #f3f5f7;
+}
+
+.public-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+@media (max-width: 768px) {
+  .public-content {
+    padding: 24px 16px;
+  }
+}

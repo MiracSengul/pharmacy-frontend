@@ -1,0 +1,73 @@
+/* src/components/ProductModal.css */
+
+/* Dialog konteyneri */
+.product-modal .MuiDialog-paper {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+/* Başlık */
+.product-modal .MuiDialogTitle-root {
+  background: #f1f8f4;
+  padding: 18px 24px;
+  font-weight: 700;
+  color: #111827;
+  border-bottom: 1px solid #e0ece3;
+}
+
+/* İçerik alanı */
+.product-modal .MuiDialogContent-root {
+  padding: 24px !important;
+  background: #fff;
+}
+
+/* Butonlar alanı */
+.product-modal .MuiDialogActions-root {
+  padding: 16px 24px !important;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  gap: 8px;
+}
+
+/* Form elemanları arası boşluk */
+.product-modal .MuiTextField-root {
+  margin-bottom: 16px;
+}
+
+/* Input alanları */
+.product-modal .MuiOutlinedInput-root {
+  border-radius: 8px !important;
+  background: #fff;
+}
+
+/* Label renkleri */
+.product-modal .MuiInputLabel-root {
+  color: #6b7280;
+}
+
+/* Odaklanınca input */
+.product-modal .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #5EAA7B !important;
+  border-width: 2px;
+}
+
+/* Hata mesajı */
+.product-modal .MuiFormHelperText-root.Mui-error {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+/* Mobil tam ekran */
+@media (max-width: 599px) {
+  .product-modal .MuiDialog-paper {
+    margin: 0 !important;
+    max-height: 100% !important;
+    border-radius: 0 !important;
+    width: 100%;
+  }
+
+  .product-modal .MuiDialogContent-root {
+    padding: 16px !important;
+  }
+}

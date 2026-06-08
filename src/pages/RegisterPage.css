@@ -1,0 +1,169 @@
+/* ---- Genel Sayfa Arka Planı ---- */
+.register-page {
+  min-height: 100vh;
+  background: #f6f8f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arka plan deseni (soluk yeşil şeritler) */
+.register-page::after {
+  content: '';
+  position: absolute;
+  right: -10%;
+  bottom: -15%;
+  width: 70%;
+  height: 100%;
+  background: radial-gradient(ellipse at 80% 80%, rgba(94, 170, 123, 0.12) 0%, transparent 70%),
+              radial-gradient(ellipse at 70% 90%, rgba(94, 170, 123, 0.08) 0%, transparent 60%);
+  transform: rotate(-15deg);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---- Logo (sol üst köşe) ---- */
+.register-logo {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.register-logo-icon {
+  display: flex;
+  gap: 3px;
+}
+
+.register-logo-icon .square {
+  width: 12px;
+  height: 12px;
+  background-color: #5EAA7B;
+  border-radius: 2px;
+}
+
+.register-logo-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e2a2a;
+}
+
+/* ---- Ana İçerik Grid ---- */
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 60px;
+  z-index: 1;
+  position: relative;
+}
+
+/* ---- Sol Sütun ---- */
+.register-left {
+  flex: 1;
+  text-align: left;
+}
+
+.register-pill-image {
+  width: 180px;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.08));
+  margin-bottom: 20px;
+}
+
+.register-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1e2a2a;
+  margin-bottom: 0;
+}
+
+.register-title .highlight {
+  color: #5EAA7B;
+}
+
+/* ---- Sağ Sütun (Form) ---- */
+.register-right {
+  flex: 1;
+  max-width: 420px;
+  background: white;
+  padding: 40px 32px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-input {
+  width: 100%;
+  padding: 15px 22px;
+  border-radius: 50px;
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+  transition: 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.register-input::placeholder {
+  color: #b0b0b0;
+  font-weight: 400;
+}
+
+.register-input:focus {
+  border-color: #5EAA7B;
+  box-shadow: 0 0 0 3px rgba(94, 170, 123, 0.15);
+}
+
+.register-btn {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #5EAA7B;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.register-btn:hover {
+  background-color: #4b8f65;
+  box-shadow: 0 8px 20px rgba(94, 170, 123, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px;
+  }
+
+  .register-left {
+    text-align: center;
+  }
+
+  .register-title {
+    font-size: 2.2rem;
+  }
+
+  .register-right {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+}

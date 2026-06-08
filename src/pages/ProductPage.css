@@ -1,0 +1,165 @@
+.product-detail-page {
+  min-height: 100vh;
+  background: #f3f5f7;
+  padding: 40px 24px;
+}
+
+.product-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+}
+
+/* Sol Kolon */
+.product-detail-left {
+  flex: 0 0 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-detail-image {
+  background: #fff;
+  border: 1px solid #dceee2;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-detail-image img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.product-detail-info {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.product-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Adet Seçici + Sepete Ekle */
+.product-detail-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.quantity-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.quantity-stepper button {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: none;
+  color: #6b7280;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-stepper button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.quantity-stepper span {
+  width: 40px;
+  text-align: center;
+  font-weight: 600;
+  color: #111827;
+  font-size: 1rem;
+}
+
+.add-cart-btn {
+  background-color: #5EAA7B !important;
+  color: #fff !important;
+  text-transform: none !important;
+  border-radius: 20px !important;
+  padding: 8px 24px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.add-cart-btn:hover {
+  background-color: #4b8f65 !important;
+}
+
+/* Sağ Kolon */
+.product-detail-right {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+/* Sekmeler */
+.product-detail-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.tab-btn {
+  padding: 8px 24px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #e8f5e9;
+  color: #5EAA7B;
+  transition: 0.2s;
+}
+
+.tab-btn.active {
+  background: #5EAA7B;
+  color: #fff;
+}
+
+/* Sekme İçeriği */
+.product-detail-tab-content {
+  min-height: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-detail-container {
+    flex-direction: column;
+  }
+
+  .product-detail-left {
+    flex: auto;
+  }
+
+  .product-detail-image {
+    padding: 24px;
+  }
+}
+
+.product-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}

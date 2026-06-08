@@ -1,0 +1,191 @@
+.public-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sol bölüm */
+.public-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.public-logo-icon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+
+.public-cross {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #5EAA7B;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.public-cross::before,
+.public-cross::after {
+  content: '';
+  position: absolute;
+  background: #5EAA7B;
+}
+
+.public-cross::before {
+  width: 6px;
+  height: 18px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.public-cross::after {
+  width: 18px;
+  height: 6px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.public-leaf {
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50% 0 50% 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  z-index: 1;
+}
+
+.public-brand-text {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #111827;
+}
+
+/* Orta navigasyon */
+.public-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.public-nav-item {
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-decoration: none;
+  transition: 0.2s;
+  background: #fff;
+}
+
+.public-nav-item:hover {
+  background: #f0f0f0;
+}
+
+.public-nav-item.active {
+  background: #5EAA7B;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Sağ bölüm */
+.public-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.public-cart-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.public-cart-btn:hover {
+  background: #f0f0f0;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #5EAA7B;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.public-profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e8f5e9;
+  color: #5EAA7B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.public-logout-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1.5px solid #5EAA7B;
+  color: #5EAA7B;
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.public-logout-btn:hover {
+  background: #e8f5e9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .public-header {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .public-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  .public-nav-item {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}

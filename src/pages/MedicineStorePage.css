@@ -1,0 +1,166 @@
+.medicine-store-page {
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.store-page-title {
+  font-weight: 700 !important;
+  color: #111827;
+  margin-bottom: 32px !important;
+  text-align: left !important;
+}
+
+/* 3x3 Grid */
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ========== KART ========== */
+.store-card {
+  position: relative;
+  background-color: #E8F5E9;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Dekoratif dalga deseni */
+.store-card-pattern {
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at 40% 60%, rgba(76, 175, 80, 0.15) 0%, transparent 60%),
+              radial-gradient(circle at 70% 30%, rgba(76, 175, 80, 0.1) 0%, transparent 50%);
+  border-radius: 40% 60% 30% 70% / 50% 40% 60% 50%;
+  transform: rotate(-15deg);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ========== ÜST İÇERİK ========== */
+.store-card-body {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.store-card-name {
+  font-weight: 700 !important;
+  color: #000000 !important;
+  margin-bottom: 16px !important;
+  font-size: 1.1rem !important;
+}
+
+.store-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-icon {
+  flex-shrink: 0;
+}
+
+.info-text {
+  color: #4a5568 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+}
+
+/* ========== ALT AKSİYON SATIRI ========== */
+.store-card-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+/* Visit Store Butonu */
+.visit-btn {
+  background-color: #4CAF50 !important;
+  color: #FFFFFF !important;
+  text-transform: none !important;
+  border-radius: 20px !important;
+  padding: 6px 20px !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+}
+
+.visit-btn:hover {
+  background-color: #388E3C !important;
+}
+
+/* Rating + Durum Grubu */
+.rating-status-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating-value {
+  color: #000000 !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+}
+
+/* Durum Rozeti */
+.status-badge {
+  padding: 4px 14px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status-badge.open {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #2E7D32;
+}
+
+.status-badge.close {
+  background-color: rgba(211, 47, 47, 0.1);
+  color: #C62828;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .store-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .store-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .store-page-title {
+    font-size: 1.8rem !important;
+  }
+}
